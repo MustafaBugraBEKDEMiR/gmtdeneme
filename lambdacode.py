@@ -5,7 +5,7 @@ from kafka import KafkaProducer
 import json
 
 topic_name='sensor_data_consumer'
-producer = KafkaProducer(bootstrap_servers=['13.53.187.181:9092']
+producer = KafkaProducer(bootstrap_servers=['https://gmtdeneme-c6872e1b7d1b.herokuapp.com/']
 ,value_serializer=lambda x: dumps(x).encode('utf-8'))
 
 def lambda_handler(event, context):
